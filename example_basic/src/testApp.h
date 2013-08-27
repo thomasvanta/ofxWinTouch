@@ -20,9 +20,9 @@ class testApp : public ofBaseTouchApp{
 		void gotMessage(ofMessage msg);
 
 		// win7 events
-		void touchDown(int id, int x, int y);
-		void touchMove(int id, int x, int y);
-		void touchUp(int id, int x, int y);
+		void touchDown(ofTouchEventArgs touch);
+		void touchMoved(ofTouchEventArgs touch);
+		void touchUp(ofTouchEventArgs touch);
 
 		// NOTE: you must call setUseGestures() in your main.cpp to use these last two
 		void twoFingerTap();

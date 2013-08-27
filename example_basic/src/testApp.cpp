@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-
+	
 }
 
 //--------------------------------------------------------------
@@ -64,18 +64,18 @@ void testApp::dragEvent(ofDragInfo dragInfo){
 }
 
 //--------------------------------------------------------------
-void testApp::touchDown(int id, int x, int y){
-	touches.insert(pair<int,ofPoint>(id,ofPoint(x,y)));
+void testApp::touchDown(ofTouchEventArgs touch){
+	touches.insert(pair<int,ofPoint>(touch.id,ofPoint(touch.x,touch.y)));
 }
 
 //--------------------------------------------------------------
-void testApp::touchMove(int id, int x, int y){
-	touches[id].set(x,y);
+void testApp::touchMoved(ofTouchEventArgs touch){
+	touches[touch.id].set(touch.x,touch.y);
 }
 		
 //--------------------------------------------------------------
-void testApp::touchUp(int id, int x, int y){
-	touches.erase(id);
+void testApp::touchUp(ofTouchEventArgs touch){
+	touches.erase(touch.id);
 }
 		
 //--------------------------------------------------------------
