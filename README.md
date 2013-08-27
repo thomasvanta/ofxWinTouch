@@ -2,6 +2,8 @@ ofxWinTouch
 =======
 Compatible with openFrameworks 0.8.0
 
+Note - this version (ofxWinTouch) introduces breaking changes from the original ofxWin7. I changed the order of the arguments in the touch callbacks to match existing oF implementations, and changed touchMove to touchMoved.
+
 Simple helper classes to setup native Windows multitouch in openFrameworks. Supports both Windows 7/8 touch events as well as a gestures. 
 
 Based on code from the OF forum here: http://forum.openframeworks.cc/index.php/topic,3120.new.html#new
