@@ -404,7 +404,9 @@ void ofWinGlutWindow::runAppViaInfiniteLoop(ofBaseApp * appPtr){
 
 	// register touch app with gesture + touch engines
 	gestureEnginePtr->setAppPointer((ofBaseTouchApp*)appPtr);
-    touchEnginePtr->setAppPointer((ofBaseTouchApp*)appPtr);  
+    touchEnginePtr->setAppPointer((ofBaseTouchApp*)appPtr);
+
+	
 
 	ofNotifySetup();
 	ofNotifyUpdate();
