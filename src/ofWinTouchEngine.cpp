@@ -56,6 +56,7 @@ void ofWinTouchEngine::OnTouchDown(int id, int x, int y) {
         touch.x = x;
         touch.y = y;
         touch.id = id;
+		touch.type	= ofTouchEventArgs::Type::down;
 		_ofAppPtr->touchDown(touch);
         ofNotifyEvent( ofEvents().touchDown, touch );
         }
@@ -69,6 +70,7 @@ void ofWinTouchEngine::OnTouchMove(int id, int x, int y) {
         touch.x = x;
         touch.y = y;
         touch.id = id;
+		touch.type	= ofTouchEventArgs::Type::move;
 		_ofAppPtr->touchMoved(touch);
         ofNotifyEvent( ofEvents().touchMoved, touch );
         }
@@ -82,6 +84,7 @@ void ofWinTouchEngine::OnTouchUp(int id, int x, int y) {
 		touch.x = x;
         touch.y = y;
         touch.id = id;
+		touch.type	= ofTouchEventArgs::Type::up;
 		_ofAppPtr->touchUp(touch);
         ofNotifyEvent( ofEvents().touchUp, touch );
         }
