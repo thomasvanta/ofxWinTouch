@@ -70,7 +70,7 @@ void ofWinTouchEngine::OnTouchMove(int id, int x, int y) {
         touchEventArgs.y = y;
         touchEventArgs.id = id;
 		_ofAppPtr->touchMoved(touchEventArgs);
-      //  ofNotifyEvent( ofEvents().touchMoved, touchEventArgs );
+        ofNotifyEvent( ofEvents().touchMoved, touchEventArgs );
         }
 }
 

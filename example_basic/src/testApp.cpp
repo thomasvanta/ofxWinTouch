@@ -64,17 +64,17 @@ void testApp::dragEvent(ofDragInfo dragInfo){
 }
 
 //--------------------------------------------------------------
-void testApp::touchDown(ofTouchEventArgs touch){
+void testApp::touchDown(ofTouchEventArgs &touch){
 	touches.insert(pair<int,ofPoint>(touch.id,ofPoint(touch.x,touch.y)));
 }
 
 //--------------------------------------------------------------
-void testApp::touchMoved(ofTouchEventArgs touch){
+void testApp::touchMoved(ofTouchEventArgs &touch){
 	touches[touch.id].set(touch.x,touch.y);
 }
 		
 //--------------------------------------------------------------
-void testApp::touchUp(ofTouchEventArgs touch){
+void testApp::touchUp(ofTouchEventArgs &touch){
 	touches.erase(touch.id);
 }
 		
