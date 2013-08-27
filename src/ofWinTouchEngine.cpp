@@ -50,40 +50,40 @@ LRESULT ofWinTouchEngine::processTouch(HWND hWnd, WPARAM wParam, LPARAM lParam) 
 }
 
 void ofWinTouchEngine::OnTouchDown(int id, int x, int y) {
-	static ofTouchEventArgs touchEventArgs;
+	static ofTouchEventArgs touch;
 	
 	if(_ofAppPtr) {
-        touchEventArgs.x = x;
-        touchEventArgs.y = y;
-        touchEventArgs.id = id;
-		_ofAppPtr->touchDown(touchEventArgs);
-        ofNotifyEvent( ofEvents().touchDown, touchEventArgs );
+        touch.x = x;
+        touch.y = y;
+        touch.id = id;
+		_ofAppPtr->touchDown(touch);
+        ofNotifyEvent( ofEvents().touchDown, touch );
         }
 }
 
 void ofWinTouchEngine::OnTouchMove(int id, int x, int y) {
     
-	static ofTouchEventArgs touchEventArgs;
+	static ofTouchEventArgs touch;
     
 	if(_ofAppPtr) {
-        touchEventArgs.x = x;
-        touchEventArgs.y = y;
-        touchEventArgs.id = id;
-		_ofAppPtr->touchMoved(touchEventArgs);
-        ofNotifyEvent( ofEvents().touchMoved, touchEventArgs );
+        touch.x = x;
+        touch.y = y;
+        touch.id = id;
+		_ofAppPtr->touchMoved(touch);
+        ofNotifyEvent( ofEvents().touchMoved, touch );
         }
 }
 
 void ofWinTouchEngine::OnTouchUp(int id, int x, int y) {
     
-	static ofTouchEventArgs touchEventArgs;
+	static ofTouchEventArgs touch;
     
 	if(_ofAppPtr) {
-		touchEventArgs.x = x;
-        touchEventArgs.y = y;
-        touchEventArgs.id = id;
-		_ofAppPtr->touchUp(touchEventArgs);
-        ofNotifyEvent( ofEvents().touchUp, touchEventArgs );
+		touch.x = x;
+        touch.y = y;
+        touch.id = id;
+		_ofAppPtr->touchUp(touch);
+        ofNotifyEvent( ofEvents().touchUp, touch );
         }
 }
 
