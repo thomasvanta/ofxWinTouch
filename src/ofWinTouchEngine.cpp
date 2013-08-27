@@ -8,7 +8,7 @@ ofWinTouchEngine::~ofWinTouchEngine(void) {}
 
 
 LRESULT ofWinTouchEngine::processTouch(HWND hWnd, WPARAM wParam, LPARAM lParam) {
-    
+
 	BOOL bHandled = FALSE;
     UINT cInputs = LOWORD(wParam);
     PTOUCHINPUT pInputs = new TOUCHINPUT[cInputs];
@@ -53,12 +53,10 @@ void ofWinTouchEngine::OnTouchDown(int id, int x, int y) {
 	static ofTouchEventArgs touchEventArgs;
 	
 	if(_ofAppPtr) {
-        
-		_ofAppPtr->touchDown(id, x, y);
-#ifdef OF_USING_POCO
         touchEventArgs.x = x;
         touchEventArgs.y = y;
         touchEventArgs.id = id;
+#ifdef OF_USING_POCO
         ofNotifyEvent( ofEvents().touchDown, touchEventArgs );
 #endif
         }
@@ -69,12 +67,10 @@ void ofWinTouchEngine::OnTouchMove(int id, int x, int y) {
 	static ofTouchEventArgs touchEventArgs;
     
 	if(_ofAppPtr) {
-        
-		_ofAppPtr->touchMove(id, x, y);
-#ifdef OF_USING_POCO
         touchEventArgs.x = x;
         touchEventArgs.y = y;
         touchEventArgs.id = id;
+#ifdef OF_USING_POCO
         ofNotifyEvent( ofEvents().touchMoved, touchEventArgs );
 #endif
         }
@@ -85,12 +81,10 @@ void ofWinTouchEngine::OnTouchUp(int id, int x, int y) {
 	static ofTouchEventArgs touchEventArgs;
     
 	if(_ofAppPtr) {
-        
-		_ofAppPtr->touchUp(id, x, y);
-#ifdef OF_USING_POCO
-        touchEventArgs.x = x;
+		touchEventArgs.x = x;
         touchEventArgs.y = y;
         touchEventArgs.id = id;
+#ifdef OF_USING_POCO
         ofNotifyEvent( ofEvents().touchUp, touchEventArgs );
 #endif
         }
