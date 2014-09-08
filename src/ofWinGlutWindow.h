@@ -20,7 +20,7 @@
 //class ofPoint;
 class ofBaseApp;
 
-class ofWinGlutWindow : public ofAppBaseWindow {
+class ofWinGlutWindow : public ofAppBaseGLWindow {
     
 public:
     
