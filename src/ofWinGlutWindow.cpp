@@ -346,7 +346,9 @@ void ofWinGlutWindow::initializeWindow(){
 			/* digitizer is multitouch */
 			// second param is type of events to send. I like TWF_WANTPALM because
 			// it sends events starting with first "touchDown"
-			RegisterTouchWindow(handle, TWF_WANTPALM );
+			//https://social.msdn.microsoft.com/Forums/windowsdesktop/en-US/3d664140-543e-44ed-9220-1fab12db4f35/what-does-coalesced-input-wmtouch-mean?forum=tabletandtouch
+			//http://msdn.microsoft.com/en-us/library/windows/desktop/dd317326(v=vs.85).aspx
+			RegisterTouchWindow(handle,  TWF_FINETOUCH | TWF_WANTPALM ); //TWF_FINETOUCH  || TWF_WANTPALM 
 		} else MessageBoxW(handle, L"No Multitouch found", L"not good", MB_OK);
 		if (value & NID_INTEGRATED_TOUCH){ /* Integrated touch */}
 	}
