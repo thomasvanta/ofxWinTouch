@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxWinTouch\src\GestureEngine.cpp">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxWinTouch\src\ofBaseTouchApp.cpp">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxWinTouch\src\ofWinGestureEngine.cpp">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxWinTouch\src\ofWinGlutWindow.cpp">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxWinTouch\src\ofWinTouchEngine.cpp">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinTouch">
+			<UniqueIdentifier>{45F8CA1C-3747-0512-30BC-12F1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinTouch\src">
+			<UniqueIdentifier>{AC5D4DC6-1491-19DA-56BD-6B27}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinTouch\src\GestureEngine.h">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinTouch\src\ofBaseTouchApp.h">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinTouch\src\ofWinGestureEngine.h">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinTouch\src\ofWinGlutWindow.h">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinTouch\src\ofWinTouchEngine.h">
+			<Filter>addons\ofxWinTouch\src</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>
